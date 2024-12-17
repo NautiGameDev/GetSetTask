@@ -1,0 +1,118 @@
+﻿<Window x:Class="Projecraft.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projecraft"
+        xmlns:views="clr-namespace:Projecraft.Views"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="600" 
+        Width="800"
+        Background="Transparent"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        >
+    
+    
+    
+    <Border Background="#071623"
+            CornerRadius="25">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="18"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="500"/>
+                
+            </Grid.RowDefinitions>
+            <Border Background="#123456"
+                    CornerRadius="10"
+                    Width="750"
+                    MouseDown="Border_MouseDown">
+                <StackPanel Orientation="Horizontal">
+                <TextBlock Text="GetSetTask - v.1.0"
+                           Foreground="#C7E8F3"
+                           HorizontalAlignment="Center"
+                           FontSize="12"
+                            Margin="10, 0, 610, 0"
+                           FontWeight="Medium"/>
+                    <Button Height="15"
+                            Width="15"
+                            FontSize="10"
+                            Background="Transparent"
+                            Foreground="#C7E8F3"
+                            Content="❌"
+                            x:Name="CloseButton"
+                            Click="CloseButton_Click"
+                            BorderThickness="1"
+                            BorderBrush="#C7E8F3"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Padding="0"
+                            />
+                </StackPanel>
+
+            </Border>
+
+            <StackPanel Height="100" Grid.Row="1">
+
+                <TextBlock Text="GetSetTask"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Foreground="#FBB03B"
+                           FontWeight="Bold"
+                           FontSize="32"
+                           Margin="0"
+                           Grid.Row="1"/>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            Margin="5"
+                            >
+                    <RadioButton Content="Profile"
+                                 Foreground="#F2F4F3"
+                                 FontSize="16"
+                                 Height="25"
+                                 Width="100"
+                                 HorizontalContentAlignment="Center"
+                                 Visibility="Hidden"
+                                 x:Name="ProfileButton"
+                                 Style="{StaticResource RadioButtonTheme}"
+                                 Click="ProfileButton_Click"
+                                 />
+                    <RadioButton Content="Projects"
+                                 Foreground="#F2F4F3"
+                                 FontSize="16"
+                                 Height="25"
+                                 Width="100"
+                                 HorizontalContentAlignment="Center"
+                                 Style="{StaticResource RadioButtonTheme}"
+                                 Visibility="Hidden"
+                                 x:Name="ProjectsButton"
+                                 IsChecked="True"
+                                 Click="ProjectsButton_Click"
+                                 />
+                    
+                </StackPanel>
+                <Separator Width="200"
+                           Foreground="#F2F4F3"
+                           Background="#FBB03B"
+                           Height="1"
+                           Grid.Row="1"
+                           />
+            </StackPanel>
+
+            <Grid x:Name="ContentBox"
+                            Grid.Row="2"
+                            VerticalAlignment="Center"
+                            Height="500"/>
+
+            
+
+
+        </Grid>
+
+
+    </Border>
+</Window>

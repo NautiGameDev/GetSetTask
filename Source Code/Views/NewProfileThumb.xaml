@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="Projecraft.Views.NewProfileThumb"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Projecraft.Views"
+             mc:Ignorable="d" d:DesignWidth="55" Height="55">
+    <StackPanel VerticalAlignment="Center">
+        <Border BorderBrush="#C7E8F3"
+                BorderThickness="1"
+                Width="50"
+                Height="50">
+
+            <Button Content="Create"
+                    x:Name="NewProfileButton"
+                    Width="50"
+                    Height="50"
+                    Padding="2"
+                    Foreground="#C7E8F3"
+                    Background="Transparent"
+                    FontSize="12"
+                    FontWeight="Medium"
+                    VerticalContentAlignment="Bottom"
+                    HorizontalContentAlignment="Left"
+                    BorderThickness="0"
+                    Click="NewProfileButton_Click"
+                    MouseEnter="NewProfileButton_MouseEnter"
+                    MouseLeave="NewProfileButton_MouseLeave"/>
+
+        </Border>
+
+
+    </StackPanel>
+
+
+
+</UserControl>
